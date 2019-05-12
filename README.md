@@ -26,10 +26,10 @@
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: falsel 
+|body|text|null: false|
 |image|string|
 |user_ID|bigint|null :false,foreign_key: true| 
-|group_ID|bigint|null :false,foreign_key: truel 
+|group_ID|bigint|null :false,foreign_key: true|
 
 ### Association
 - belongs_to：user
