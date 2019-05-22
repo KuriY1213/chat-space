@@ -1,0 +1,59 @@
+%header
+  グループを作成しました
+.wrapper
+  .wrapper__side
+    .wrapper__side__header
+      %p
+        KuriY
+      %a
+        = link_to do
+          = fa_icon 'cog'
+        = link_to do
+          = fa_icon 'pencil-square-o'
+    .wrapper__side__groups
+      .wrapper__side__groups__room
+        .wrapper__side__groups__room__name
+          test
+        .wrapper__side__groups__room__message
+          まだメッセージがありません
+        .wrapper__side__groups__room__name
+          test2
+        .wrapper__side__groups__room__message
+          まだメッセージがありません
+  .wrapper__main
+    .wrapper__main__header
+      .wrapper__main__header__contents
+        %h2
+          test
+        %p
+          Member : KuriY
+      .wrapper__main__header__edit
+        #box
+          %p
+            Edit
+    .wrapper__main__body
+      .wrapper__main__body__chat
+        %p.wrapper__main__body__chat__name
+          KuriY
+          %p.wrapper__main__body__chat__date
+            2019/05/15(Wed) 22:50:59
+        %p.wrapper__main__body__chat__text
+          aaaa
+        %p.wrapper__main__body__chat__name
+          KuriY
+          %p.wrapper__main__body__chat__date
+            2019/05/15(Wed) 23:50:59
+        %p.wrapper__main__body__chat__text
+          iiiii
+        .image-a
+    .wrapper__submit
+      .wrapper__submit__text
+        = text_area_tag :text, '', placeholder: 'type a message', class: "textbox"
+        .form__mask
+          %label.upload-label{for: "upload-icon"}
+            %i.fa.fa-picture-o
+            %input{type:"file",style:"display:none;",id:"upload-icon"} 
+      .wrapper__submit__send
+        #box
+          %p
+            Send
