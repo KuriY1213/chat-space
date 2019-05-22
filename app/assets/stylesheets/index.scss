@@ -1,0 +1,169 @@
+*{
+  box-sizing: border-box;
+  }
+header{
+        background-color: $liteBlue;
+        text-align: center;
+        color: $white;
+        }
+.wrapper{
+        &__side{
+                color: $white;
+                float: left;
+                width: $sideWidth;
+                position: fixed;
+                height: 100vh;
+                font-weight: $bold;
+                &__header{
+                          background-color: #253141;
+                          height: $headerHeight;
+                          padding: 0 $blank20;
+                          line-height: $headerHeight;
+                          p{
+                          font-size: 16px;
+                          display: inline-block;
+                            }
+                          a{
+                            color: $white;
+                            margin-left: 5px;
+                            float: right;
+                            }
+                          }
+                &__groups{
+                          padding: $blank20 $blank20 0;
+                          background-color: #2f3e51;
+                          height: 100vh;
+                          &__room{
+                                  height: 71px;
+                                  &__name{
+                                          font-size: 15px;
+                                          padding-bottom: 5px;
+                                          }
+                                  &__message{
+                                            font-size: 11px;
+                                            padding-bottom: $blank40;
+                                            }
+                                  }
+                          }
+                }
+        &__main{
+                float: right;
+                width: calc(100vw - 300px);
+                &__header{
+                          height: $headerHeight;
+                          border-bottom: solid 1px #eeeeee;
+                  &__contents{
+                              float: left;
+                              h2{
+                                  padding: 35px 0 15px $blank40;
+                                  font-size: 20px;
+                                  color: #333333;
+                                }
+                              p{
+                                font-size: 12px;
+                                color: $SilverGray;
+                                padding-left: $blank20;
+                                }
+                              }
+                              &__edit{
+                                      color: $liteBlue;
+                                      padding: 28px $blank40;
+                                      float: right;
+                                      line-height: 40px;
+                                      }
+                                      #box{
+                                           height: 40px;
+                                           border: solid 1px $liteBlue;
+                                          }
+                                      p{
+                                        margin: 0 $blank20;
+                                      }
+                          }
+                  &__body{
+                          height: calc(100vh - 190px);
+                          max-height: 100%;
+                          background-color: #fafafa;
+                          &__chat{
+                                  padding: 46px 0 0 $blank40;
+                                  &__name{
+                                          font-size: 16px;
+                                          display: inline-block;
+                                          font-weight: $bold;
+                                          color: $darkBlue;
+                                          padding-bottom: 10px;
+                                         }
+                                  &__date{
+                                          color: $SilverGray;
+                                          font-size: 12px;
+                                          line-height: 16px;
+                                          display: inline-block;
+                                          padding-left: 10px;
+                                          }
+                                  &__text{
+                                          font-size: 14px;
+                                          color: $darkBlue;
+                                          padding-bottom: $blank40;
+                                          }
+                                  }
+                        }
+                }
+        &__submit{
+                  position: fixed;
+                  background-color: #ddd;
+                  bottom: 0;
+                  width: calc(100vw - 300px);
+                  height: 90px;
+                  padding: $blank20 $blank40;
+                  left: $sideWidth;
+                  &__text{
+                          line-height: 50px;
+                          width: calc(100% - 115px);
+                          position: relative;
+                          display: inline-block;
+                          .textbox{
+                                  color: $darkBlue;
+                                  line-height: 50px;
+                                  height: 50px;
+                                  width: 100%;
+                                  border-style: none;
+                                  z-index: 1;
+                                  padding: 0 10px;
+                                  resize: none; 
+                                    }
+                                i{
+                                  font-size: 21px;
+                                  position: absolute;
+                                  top: 2px;
+                                  right: 10px;
+                                  line-height: 50px;
+                                  z-index: 2;
+                                  cursor: pointer;
+                                  }
+                                #upload-icon{
+                                             display: none;
+                                             }
+                          }
+                  &__send{
+                          color: $white;
+                          padding: $blank20 $blank40 $blank20 15px;
+                          line-height: 55px;
+                          width: 100px;
+                          display: inline-block;
+                          position: absolute;
+                          bottom: 0.5px;
+                    #box{
+                        height: 50px;
+                        margin: 0 auto ;
+                        border: solid 1px $liteBlue;
+                        background-color: $liteBlue;
+                        position: absolute;
+                        line-height: 50px;
+                        bottom: 20px;
+                        width: 100%;
+                        }
+                    p{
+                      margin: 0 30px;
+                      }
+                          }
+                  }
+        }
