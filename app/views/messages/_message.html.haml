@@ -1,9 +1,11 @@
 .message-wrapper
   .wrapper__main__body__chat
     %p.wrapper__main__body__chat__comment__name
-      KuriY
-    %p.wrapper__main__body__chat__comment__time
-      2019/05/15(Wed) 22:50:59
-      %p.wrapper__main__body__chat__comment__text
-        aaaa
-    .image-a
+      = message.user.name
+      %p.wrapper__main__body__chat__comment__time
+        = message.created_at.strftime("%Y/%m/%d %H:%M")
+    %p.wrapper__main__body__chat__comment__text
+      - if message.content.present?
+        %p.lower-message__content
+          = message.content
+      = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
