@@ -1,9 +1,14 @@
 class MessagesController < ApplicationController
   before_action :set_group
-  
+
   def index
     @message = Message.new
     @messages = @group.messages.includes(:user)
+    # respond_to do |format|
+    #   format.html
+
+    #   format.json{@new_message = @messages.where('id > ?', params[:id])}
+    # end
   end
 
   def create
@@ -13,7 +18,6 @@ class MessagesController < ApplicationController
         format.html{redirect_to group_messages_path(@group), notice: 'メッセージが送信されました'}
         format.json
       end
-      # redirect_to group_messages_path(@group), notice: 'メッセージが送信されました'
     else
       @messages = @group.messages.includes(:user)
       flash.now[:alert] = 'メッセージを入力してください。'
