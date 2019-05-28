@@ -1,24 +1,24 @@
 -# %header
 -#   グループを作成しました
 .wrapper
-  = render 'shared/side_bar'
-  -# .wrapper__side
-  -#   .wrapper__side__header
-  -#     %p.wrapper__side__header__name
-  -#       = current_user.name
-  -#     %a.wrapper__side__header__lists
-  -#       = link_to new_group_path do
-  -#         = fa_icon 'pencil-square-o', class: 'icon'
-  -#       = link_to edit_user_path(current_user) do
-  -#         = fa_icon 'cog', class: 'icon'
-  -#   .wrapper__side__groups
-  -#     .wrapper__side__groups__side__room
-  -#       - current_user.groups.each do |group|
-  -#         = link_to group_messages_path(group) do
-  -#           .wrapper__groups__side__room__name
-  -#             = group.name
-  -#           .wrapper__groups__side__room__message
-  -#             メッセージはまだありません。
+  -# = render 'shared/side_bar'
+  .wrapper__side
+    .wrapper__side__header
+      %p.wrapper__side__header__name
+        = current_user.name
+      %a.wrapper__side__header__lists
+        = link_to edit_user_path(current_user) do
+          = fa_icon 'cog', class: 'icon'
+        = link_to new_group_path do
+          = fa_icon 'pencil-square-o', class: 'icon'
+    .wrapper__side__groups
+      - current_user.groups.each do |group|
+        .wrapper__side__groups__room
+          = link_to group_messages_path(group) do
+            .wrapper__side__groups__room__name
+              = group.name
+            .wrapper__side__groups__room__message
+              = group.show_last_message
   .wrapper__main
     .wrapper__main__header
       .wrapper__main__header__contents
@@ -49,14 +49,15 @@
     .wrapper__submit
       .wrapper__submit__text
         = form_for [@group, @message] do |f|
-          = f.text_field :text, class: 'textbox', placeholder: 'type a message'
-          .form__mask
+          = f.text_field :content, class: 'textbox', placeholder: 'type a message'
+          #i.form__mask
             = f.label :image, class: 'form__mask__image' do
               = fa_icon 'picture-o', class: 'icon'
               = f.file_field :image, class: 'hidden'
-          = f.submit 'Send', class: 'box' 
+              -# .wrapper__submit__send
+          = f.submit 'Send', class: 'box'
 
-      -#   = text_area_tag :text, '', placeholder: 'type a message', class: "textbox"
+        -# = text_area_tag :text, '', placeholder: 'type a message', class: "textbox"
       -#   .form__mask
       -#     %label.upload-label{for: "upload-icon"}
       -#       %i.fa.fa-picture-o
