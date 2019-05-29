@@ -38,10 +38,12 @@ header{
                                   &__name{
                                           font-size: 15px;
                                           padding-bottom: 5px;
+                                          color: $white;
                                           }
                                   &__message{
                                             font-size: 11px;
                                             padding-bottom: $blank40;
+                                            color: $white;
                                             }
                                   }
                           }
@@ -84,21 +86,22 @@ header{
                           max-height: 100%;
                           background-color: #fafafa;
                           &__chat{
-                                  padding: 46px 0 0 $blank40;
+                                  padding: 46px 0 40px 40px;
+                                //   margin-bottom: 100px;
                                   &__name{
                                           font-size: 16px;
                                           display: inline-block;
                                           font-weight: $bold;
                                           color: $darkBlue;
                                           padding-bottom: 10px;
-                                         }
+                                        }
                                   &__date{
                                           color: $silverGray;
                                           font-size: 12px;
-                                          line-height: 16px;
                                           display: inline-block;
                                           padding-left: 10px;
-                                          }
+                                          bottom: 4px;
+                                        }
                                   &__text{
                                           font-size: 14px;
                                           color: $darkBlue;
@@ -138,32 +141,22 @@ header{
                                   line-height: 50px;
                                   z-index: 2;
                                   cursor: pointer;
-                                  }
-                                #upload-icon{
-                                             display: none;
-                                             }
-                          }
-                  &__send{
-                          color: $white;
-                          padding: $blank20 $blank40 $blank20 15px;
-                          line-height: 55px;
-                          width: 100px;
-                          display: inline-block;
-                          position: absolute;
-                          bottom: 0.5px;
-                    #box{
-                        height: 50px;
-                        margin: 0 auto ;
-                        border: solid 1px $liteBlue;
-                        background-color: $liteBlue;
+                                }
+                                .hidden{
+                                        display: none;            
+                                        }
+                    .box{
+                        color: $white;
+                        padding: 12px 30px;
+                        width: 100px;
+                        display: inline-block;
                         position: absolute;
-                        line-height: 50px;
-                        bottom: 20px;
-                        width: 100%;
+                        bottom: 0.5px;
+                        height: 50px;                
+                        background-color: $liteBlue;
+                        bottom: 0.5px;                        
+                        right: -115px;                        
                         }
-                    p{
-                      margin: 0 30px;
-                      }
+                        }
                           }
-                  }
-        }
+                        }
