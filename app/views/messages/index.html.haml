@@ -46,9 +46,10 @@
           -#   %p.lower-message__content
               -# = message.content
           -# = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+    .wrapper__main__bottom
     .wrapper__submit
       .wrapper__submit__text
-        = form_for [@group, @message] do |f|
+        = form_for [@group, @message], id: "new_message" do |f|
           = f.text_field :content, class: 'textbox', placeholder: 'type a message'
           #i.form__mask
             = f.label :image, class: 'form__mask__image' do
