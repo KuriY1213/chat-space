@@ -32,7 +32,6 @@ $(function(){
       .done(function(data){
         var html = buildHTML(data);
         $(`.wrapper__main__body__chat`).append(html)
-        $(`.textbox`).val('');
         $(`input`).prop("disabled", false);
         $(`#new_message`)[0].reset();
         $('.wrapper__main__body').animate({scrollTop: $('.wrapper__main__body')[0].scrollHeight}, 'fast');
