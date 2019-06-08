@@ -3,6 +3,19 @@ class UsersController < ApplicationController
   def edit
   end
 
+  def index
+    if  params[:keyword].present?
+      @users = User.where('name LIKE(?)', "%#{params[:keyword]}%")
+    else
+      @users = []
+    end
+
+    respond_to do |format|
+      format.html
+      format.json
+    end
+  end
+
   def update
     if current_user.update(user_params)
       redirect_to root_path
