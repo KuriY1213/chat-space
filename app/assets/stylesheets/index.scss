@@ -54,6 +54,9 @@ header{
                 &__header{
                           height: $headerHeight;
                           border-bottom: solid 1px #eeeeee;
+                          position: fixed;
+                          width: calc(100vw - 300px);
+                          background-color: $white;
                   &__contents{
                               float: left;
                               h2{
@@ -82,9 +85,10 @@ header{
                                       }
                           }
                   &__body{
+                          margin-top: $headerHeight;
                           height: calc(100vh - 190px);
-                          max-height: 100%;
                           background-color: #fafafa;
+                          overflow: auto;
                           &__chat{
                                   padding: 46px 0 40px 40px;
                                 //   margin-bottom: 100px;
