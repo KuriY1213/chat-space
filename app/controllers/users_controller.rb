@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   end
 
   def index
-    if  params[:keyword].present?
+    if params[:keyword].present?
       @users = User.where('name LIKE(?)', "%#{params[:keyword]}%")
     else
       @users = []
