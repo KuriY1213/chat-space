@@ -11,9 +11,9 @@ header{
                 color: $white;
                 float: left;
                 width: $sideWidth;
-                position: fixed;
                 height: 100vh;
                 font-weight: $bold;
+                position: fixed;
                 &__header{
                           background-color: #253141;
                           height: $headerHeight;
@@ -33,6 +33,7 @@ header{
                           padding: $blank20 $blank20 0;
                           background-color: #2f3e51;
                           height: 100vh;
+                          overflow-y: auto;
                           &__room{
                                   height: 71px;
                                   &__name{
