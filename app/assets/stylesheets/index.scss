@@ -58,33 +58,35 @@ header{
                           position: fixed;
                           width: calc(100vw - 300px);
                           background-color: $white;
-                  &__contents{
-                              float: left;
-                              h2{
-                                  padding: 35px 0 15px $blank40;
-                                  font-size: 20px;
-                                  color: #333333;
+                        &__contents{
+                                float: left;
+                                h2{
+                                padding: 35px 0 15px $blank40;
+                                font-size: 20px;
+                                color: #333333;
                                 }
-                              p{
+                                p{
                                 font-size: 12px;
                                 color: $silverGray;
                                 padding-left: $blank20;
                                 }
-                              }
-                              &__edit{
-                                      color: $liteBlue;
-                                      padding: 28px $blank40;
-                                      float: right;
-                                      line-height: 40px;
-                                      }
-                                      #box{
-                                           height: 40px;
-                                           border: solid 1px $liteBlue;
-                                          }
-                                      p{
+                        }
+                        &__edit{
+                                color: $liteBlue;
+                                padding: 28px $blank40;
+                                float: right;
+                                line-height: 40px;
+                                #box{
+                                        height: 40px;
+                                        border: solid 1px $liteBlue;
+                                        p{
                                         margin: 0 $blank20;
-                                      }
-                          }
+                                        color: $liteBlue;
+                                        text-decoration: none;
+                                        }
+                                }
+                        }
+                }
                   &__body{
                           margin-top: $headerHeight;
                           height: calc(100vh - 190px);
