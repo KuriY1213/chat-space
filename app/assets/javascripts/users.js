@@ -11,10 +11,9 @@ $(document).on('turbolinks:load', function(){
     search_list.append(html);
     }
     function appendNotUser(user){
-      var html = 
-      `<div class="chat-group-user clearfix">
-        <p class="chat-group-user__name">${ user }</p>
-      </div>`
+      var html = `<div class="chat-group-user clearfix">
+                    <p class="chat-group-user__name">${ user }</p>
+                  </div>`
     search_list.append(html);
     }
     function addUsers(id,name){
@@ -52,12 +51,12 @@ $(document).on('turbolinks:load', function(){
       });
       $(function(){
         $("#user-search-result").on("click",".user-search-add", function(){
-          $(this).parent().remove();
           $('#chat-group-users').val();
           var id = $(this).data('user-id');
           var name = $(this).data("user-name")
           var html = addUsers(id,name)
           $('#chat-group-users').append(html);
+          $(this).parent().remove();
         });
         $(document).on("click", ".user-search-remove", function(){
           $(this).parent().remove();
