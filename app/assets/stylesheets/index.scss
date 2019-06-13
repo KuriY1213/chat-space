@@ -1,5 +1,6 @@
 *{
   box-sizing: border-box;
+  text-decoration: none;
   }
 header{
         background-color: $liteBlue;
@@ -11,9 +12,9 @@ header{
                 color: $white;
                 float: left;
                 width: $sideWidth;
-                position: fixed;
                 height: 100vh;
                 font-weight: $bold;
+                position: fixed;
                 &__header{
                           background-color: #253141;
                           height: $headerHeight;
@@ -33,6 +34,7 @@ header{
                           padding: $blank20 $blank20 0;
                           background-color: #2f3e51;
                           height: 100vh;
+                          overflow-y: auto;
                           &__room{
                                   height: 71px;
                                   &__name{
@@ -57,33 +59,35 @@ header{
                           position: fixed;
                           width: calc(100vw - 300px);
                           background-color: $white;
-                  &__contents{
-                              float: left;
-                              h2{
-                                  padding: 35px 0 15px $blank40;
-                                  font-size: 20px;
-                                  color: #333333;
+                        &__contents{
+                                float: left;
+                                h2{
+                                padding: 35px 0 15px $blank40;
+                                font-size: 20px;
+                                color: #333333;
                                 }
-                              p{
+                                p{
                                 font-size: 12px;
                                 color: $silverGray;
                                 padding-left: $blank20;
                                 }
-                              }
-                              &__edit{
-                                      color: $liteBlue;
-                                      padding: 28px $blank40;
-                                      float: right;
-                                      line-height: 40px;
-                                      }
-                                      #box{
-                                           height: 40px;
-                                           border: solid 1px $liteBlue;
-                                          }
-                                      p{
+                        }
+                        &__edit{
+                                color: $liteBlue;
+                                padding: 28px $blank40;
+                                float: right;
+                                line-height: 40px;
+                                #box{
+                                        height: 40px;
+                                        border: solid 1px $liteBlue;
+                                        p{
                                         margin: 0 $blank20;
-                                      }
-                          }
+                                        color: $liteBlue;
+                                        text-decoration: none;
+                                        }
+                                }
+                        }
+                }
                   &__body{
                           margin-top: $headerHeight;
                           height: calc(100vh - 190px);
