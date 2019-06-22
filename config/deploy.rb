@@ -10,7 +10,7 @@ set :rbenv_type, :user
 set :rbenv_ruby, '2.5.1' #カリキュラム通りに進めた場合、2.5.1か2.3.1です
 
 set :ssh_options, auth_methods: ['publickey'],
-                  keys: ['~/.ssh/1213Kuri.pem']  ※例：~/.ssh/key_pem.pem
+                  keys: ['~/.ssh/1213Kuri_pem.pem']  ※例：~/.ssh/key_pem.pem
 
 set :unicorn_pid, -> { "#{shared_path}/tmp/pids/unicorn.pid" }
 set :unicorn_config_path, -> { "#{current_path}/config/unicorn.rb" }
@@ -21,7 +21,7 @@ namespace :deploy do
   task :restart do
     invoke 'unicorn:restart'
   end
-  
+
   # secrets.yml用のシンボリックリンクを追加
 set :linked_files, %w{ config/secrets.yml }
 
