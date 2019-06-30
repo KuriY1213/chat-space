@@ -1,6 +1,6 @@
 $(function(){
   function buildHTML(message){
-    image = (message.image)? `<div class="image-a" src=${message.image.url} >` : "";
+    image = (message.image)? `<img class="image-a" src=${message.image} >` : "";
     var html = `
       <div class="message-group" data-id="${message.id}">
         <p class = "wrapper__main__body__chat__name">
@@ -9,10 +9,10 @@ $(function(){
         <p class ="wrapper__main__body__chat__date">
           ${message.created_at}
         </p>
-        <p class = "wrapper__main__body__chat__text">
+        <div class ="wrapper__main__body__chat__text">
           ${message.content}
-        </p>
           ${image}
+        </div>
       </div>`
     return html;
   }
