@@ -1,20 +1,20 @@
 $(function(){
   function buildHTML(message){
-    image = (message.image)? `<img class="image-a" src=${message.image} >` : "";
+    image = (message.image.url)? `<img src=${message.image.url} class="lower-message__image" >`: "";
     var html = `
       <div class="message-group" data-id="${message.id}">
-        <p class = "wrapper__main__body__chat__name">
+        <p class="wrapper__main__body__chat__name">
           ${message.user_name}
         </p>
-        <p class ="wrapper__main__body__chat__date">
+        <p class="wrapper__main__body__chat__date">
           ${message.created_at}
         </p>
-        <div class ="wrapper__main__body__chat__text">
+        <div class="wrapper__main__body__chat__text">
           ${message.content}
           ${image}
         </div>
       </div>`
-    return html;
+      return html;
   }
     $('#new_message').on('submit', function(e){
       e.preventDefault();
